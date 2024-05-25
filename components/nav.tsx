@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import NavWallet from "./navwallet";
+import Header from "./Header";
 
 export default function Nav() {
   const [isSignedIn, setIsSignedIn] = useState(useAuth().isSignedIn);
@@ -18,7 +19,11 @@ export default function Nav() {
       <a href="/" className="">
         <h1 className="font-bold text-3xl">Retire Ease</h1>
       </a>
-      <div className="flex w-4/12 justify-between items-center">
+      <div
+        className={`flex w-4/12 items-center ${
+          isSignedIn ? "justify-between" : "justify-end"
+        }`}
+      >
         <ul
           className={`flex flex-row gap-5 ${isSignedIn ? "block" : "hidden"}`}
         >
@@ -35,16 +40,17 @@ export default function Nav() {
             <Link href="/shop">Shop</Link>
           </li>
         </ul>
-        <div className="flex flex-row gap-4 items-center">
-          <div>
+        <div className="flex flex-row gap-4 justify-center items-center ">
+          <div className={`${isSignedIn ? "block" : "hidden"}`}>
             <NavWallet walletPoint={90} />
           </div>
-          <div className="flex items-center justify-center">
+          <div className="flex flex-row items-center justify-center">
             <SignedOut>
               <SignInButton forceRedirectUrl="/dashboard" />
             </SignedOut>
             <SignedIn>
-              <UserButton />
+              {/* <UserButton /> */}
+              <Header />
             </SignedIn>
           </div>
         </div>
