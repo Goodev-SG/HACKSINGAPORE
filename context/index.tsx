@@ -102,7 +102,6 @@ import { doc, getDoc, setDoc } from "firebase/firestore";
 interface User {
   uid: string;
   age: number;
-  bill: number;
   expense: number;
   income: number;
   investment: number;
@@ -115,7 +114,6 @@ interface User {
 const userContextDefaultValues: User = {
   uid: "default",
   age: 0,
-  bill: 0,
   expense: 0,
   income: 0,
   investment: 0,
@@ -146,7 +144,6 @@ export function UserProvider({ children }: { children: ReactNode }) {
         const newUser: User = {
           uid: userId,
           age: 0,
-          bill: 0,
           expense: 0,
           income: 0,
           investment: 0,
