@@ -25,7 +25,7 @@ const LineChart = () => {
     labels: inflationData.map((data) => data.year),
     datasets: [
       {
-        label: "Users Gained",
+        label: "rate of inflation",
         data: inflationData.map((data) => data.rate),
         backgroundColor: ["rgba(75,192,192,1)"],
         borderColor: "black",
@@ -48,7 +48,7 @@ const LineChart = () => {
 
   return (
     <div className="flex flex-col border w-full rounded-lg p-3 gap-4 shadow-lg">
-      <h2>Rate of Inflation</h2>
+      <h2>Rate of Inflation %</h2>
       <Line data={userData} options={chartOptions} />
     </div>
   );
