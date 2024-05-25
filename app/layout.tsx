@@ -19,8 +19,8 @@ export default function RootLayout({
       <html lang="en">
         <body>
           <Nav />
-
-          {children}
+          <div className="px-[10%] py-10">{children}</div>
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
