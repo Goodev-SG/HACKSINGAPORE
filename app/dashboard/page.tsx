@@ -1,6 +1,7 @@
 "use client";
 import CardX from "@/components/card";
 import LineChart from "@/components/linechart";
+import ScrollAreaDemo from "@/components/scrollarea";
 
 const Dashboard = () => {
   return (
@@ -64,6 +65,10 @@ const Dashboard = () => {
             />
           </div>
         </div>
+      </div>
+      <div className="flex flex-row gap-5">
+        <ScrollAreaDemo width="w-96" height="h-3/4" title="Active Plans" />
+        <ScrollAreaDemo width="w-3/4" height="h-3/4" title="Latest News" />
       </div>
     </div>
   );
