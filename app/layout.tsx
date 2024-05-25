@@ -8,8 +8,7 @@ import {
 } from "@clerk/nextjs";
 import "./globals.css";
 import Nav from "@/components/nav";
-import { UserProvider } from "@/context";
-
+import Footer from "@/components/footer";
 export default function RootLayout({
   children,
 }: {
@@ -20,7 +19,8 @@ export default function RootLayout({
       <html lang="en">
         <body>
           <Nav />
-          <UserProvider>{children}</UserProvider>
+
+          {children}
         </body>
       </html>
     </ClerkProvider>
