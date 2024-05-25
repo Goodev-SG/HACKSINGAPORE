@@ -18,12 +18,7 @@ export default function RootLayout({
       <html lang="en">
         <body>
           <Nav />
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
+
           {children}
         </body>
       </html>

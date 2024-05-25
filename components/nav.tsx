@@ -1,9 +1,18 @@
 import { Search } from "lucide-react";
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+  SignOutButton,
+} from "@clerk/nextjs";
 
 export default function Nav() {
   return (
     <div className="flex flex-row justify-between px-20 py-5 items-center border-b">
-      <h1 className="font-bold text-3xl">Retire Ease</h1>
+      <a href="/" className="">
+        <h1 className="font-bold text-3xl">Retire Ease</h1>
+      </a>
       <ul className="flex flex-row gap-5">
         <li>Dashboard</li>
         <li>Dashboard</li>
@@ -14,8 +23,12 @@ export default function Nav() {
         <input type="text" placeholder="Search" />
       </div>
       <div className="flex flex-row gap-3">
-        <img className="" src="ukflag.svg" width={50} />
-        <img className="" src="ukflag.svg" width={50} />
+        <SignedOut>
+          <SignInButton forceRedirectUrl="/dashboard" />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </div>
   );
