@@ -18,7 +18,7 @@ export default function NewsCard({
 }: Data) {
   return (
     <div
-      className={`flex flex-row w-full ${height} gap-5 border rounded-xl overflow-hidden mb-5`}
+      className={`flex flex-row w-full ${height} gap-5 border rounded-xl overflow-hidden mb-5 shadow-xl`}
     >
       <img className={`w-${width}`} src={imageSrc}></img>
       <div className="flex flex-col gap-5 p-3">
