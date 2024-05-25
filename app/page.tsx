@@ -12,7 +12,7 @@ export default function Home() {
       />
       <CardX
         title="Monthly Income"
-        data="+S$4,355,355"
+        data="+S$7,355"
         dataColor="green"
         describtion="+20% month over month"
       />
