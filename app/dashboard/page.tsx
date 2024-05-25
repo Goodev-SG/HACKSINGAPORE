@@ -1,12 +1,16 @@
+"use client";
+
 import CardX from "@/components/card";
+import { useUserData } from "@/context";
 import Image from "next/image";
 
 const Dashboard = () => {
+  const userData = useUserData();
   return (
     <div className="px-20 py-5 flex flex-row gap-5">
       <CardX
         title="Saving"
-        data="S$4,355,355"
+        data={userData ? userData.uid : "undefined"}
         dataColor="green"
         describtion="+20% month over month"
       />
