@@ -2,8 +2,8 @@ interface CardDetail {
   title: string;
   data: string;
   dataColor: string;
-  describtion?: string;
-  describtionData?: string;
+  description?: string;
+  descriptionData?: string;
   width: string;
   height: string;
 }
@@ -11,8 +11,8 @@ export default function CardX({
   title,
   data,
   dataColor,
-  describtion,
-  describtionData,
+  description,
+  descriptionData,
   width,
   height,
 }: CardDetail) {
@@ -26,8 +26,8 @@ export default function CardX({
       ) : (
         <p className="font-medium text-3xl text-red-600">{data}</p>
       )}
-      <p className="text-gray-500">{describtion}</p>
-      <p className="text-red-600 text-2xl font-semibold">{describtionData}</p>
+      <p className="text-gray-500">{description}</p>
+      <p className="text-red-600 text-2xl font-semibold">{descriptionData}</p>
     </div>
   );
 }

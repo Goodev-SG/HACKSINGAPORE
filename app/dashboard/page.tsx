@@ -11,7 +11,7 @@ const Dashboard = () => {
           title="Saving"
           data="S$4,355,355"
           dataColor="green"
-          describtion="+20% month over month"
+          description="+20% month over month"
           width="w-4/12"
           height="h-40"
         />
@@ -19,7 +19,7 @@ const Dashboard = () => {
           title="Monthly Income"
           data="+S$7,355"
           dataColor="green"
-          describtion="+20% month over month"
+          description="+20% month over month"
           width="w-4/12"
           height="h-40"
         />
@@ -27,7 +27,7 @@ const Dashboard = () => {
           title="Monthly Expense"
           data="-S$3,466"
           dataColor="red"
-          describtion="-20% month over month"
+          description="-20% month over month"
           width="w-4/12"
           height="h-40"
         />
@@ -41,7 +41,7 @@ const Dashboard = () => {
             title="GST rate %"
             data="9%"
             dataColor="red"
-            describtion="+1% than last year"
+            description="+1% than last year"
             width="w-full"
             height=""
           />
@@ -49,7 +49,7 @@ const Dashboard = () => {
             title="Income Tax %"
             data="12%"
             dataColor="red"
-            describtion="+1% than last year"
+            description="+1% than last year"
             width="w-full"
             height=""
           />
@@ -58,8 +58,8 @@ const Dashboard = () => {
               title="Portfolio Value (est.)"
               data="+S$323,040,242"
               dataColor="green"
-              describtion="Monthly Investment"
-              describtionData="-S$3,000"
+              description="Monthly Investment"
+              descriptionData="-S$3,000"
               width="w-[100%]"
               height="h-full"
             />
