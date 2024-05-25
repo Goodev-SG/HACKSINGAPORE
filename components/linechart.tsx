@@ -9,8 +9,11 @@ import {
 } from "chart.js";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement);
-
-const LineChart = () => {
+interface Data {
+  title: string;
+  width: string;
+}
+const LineChart = ({ title, width }: Data) => {
   const inflationData = [
     { year: 1990, rate: 2.1 },
     { year: 1995, rate: 3.7 },
@@ -25,7 +28,6 @@ const LineChart = () => {
     labels: inflationData.map((data) => data.year),
     datasets: [
       {
-        label: "rate of inflation",
         data: inflationData.map((data) => data.rate),
         backgroundColor: ["rgba(75,192,192,1)"],
         borderColor: "black",
@@ -33,23 +35,15 @@ const LineChart = () => {
       },
     ],
   });
-  const chartOptions: any = {
-    responsive: true,
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
-          },
-        },
-      ],
-    },
-  };
-
   return (
-    <div className="flex flex-col border w-full rounded-lg p-3 gap-4 shadow-lg">
-      <h2>Rate of Inflation %</h2>
-      <Line data={userData} options={chartOptions} />
+    <div
+      className={`flex flex-col border ${width} rounded-lg p-3 gap-4 shadow-lg`}
+    >
+      <div>
+        <h2>{title}</h2>
+        <button />
+      </div>
+      <Line data={userData} />
     </div>
   );
 };

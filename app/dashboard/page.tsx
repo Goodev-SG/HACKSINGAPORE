@@ -5,7 +5,7 @@ import ScrollAreaDemo from "@/components/scrollarea";
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-col gap-10 px-[10%] py-10">
+    <div className="flex flex-col gap-10">
       <div className="flex flex-row gap-5">
         <CardX
           title="Saving"
@@ -34,7 +34,7 @@ const Dashboard = () => {
       </div>
       <div className="flex flex-row gap-5">
         <div className="w-8/12">
-          <LineChart />
+          <LineChart title="Rate of inflation %" width="w-full" />
         </div>
         <div className="grid grid-cols-2 w-4/12 gap-5">
           <CardX
